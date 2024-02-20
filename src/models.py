@@ -30,7 +30,9 @@ class Comment(Base):
     id = Column(Integer, primary_key = True)
     comment_text = Column(String(40))
     author_id = Column(Integer, ForeignKey('user.id'))
-    post_id = Column(Integer,ForeignKey('post.id'))
+    post_id = Column(Integer, ForeignKey('post.id'))
+    author = relationship(User)
+    post = relationship(Post)
 
 class Followers(Base):
     __tablename__= 'followers'
@@ -38,7 +40,8 @@ class Followers(Base):
     id = Column(Integer, primary_key = True)
     user_to_ID = Column(Integer, ForeignKey('user.id'))
     user_from_ID = Column(Integer, ForeignKey('user.id'))
-
+    user_to = relationship(User) 
+    user_from = relationship(User)  
     
 ## Draw from SQLAlchemy base
 try:

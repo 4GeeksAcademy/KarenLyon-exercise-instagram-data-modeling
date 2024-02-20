@@ -1,0 +1,4 @@
+Hey!! Muy buen trabajo con los modelos de las tablas,
+ te falto crear las relationships correspodientes a
+  las FK en los modelos Comment /
+ Followers corrigelo y lo vuelves a subir
